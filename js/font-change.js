@@ -1,14 +1,19 @@
-// Font Changer //
-var content = document.getElementById("content");
-function changeFontSize(change_id) {
-    style = window.getComputedStyle(content, null).getPropertyValue('font-size');
-    size = parseFloat(style);
-    if (change_id == "increase") {
-        content.style.fontSize = (size + 5) + 'px';
-        size = size + 5;
-    } if (change_id == "decrease") {
-        content.style.fontSize = (size - 5) + 'px';
-        size = size - 5;
+// Font Increase //
+
+function increaseFontSize() {
+    text = document.getElementById("content");
+    style = window.getComputedStyle(text, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    if (currentSize<20){
+        text.style.fontSize = (currentSize + 1) + 'px';
     }
 }
 
+function decreaseFontSize() {
+    text = document.getElementById("content");
+    style = window.getComputedStyle(text, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    if (currentSize>2){
+        text.style.fontSize = (currentSize - 1) + 'px';
+    }
+}

@@ -163,7 +163,7 @@ nav {
     height:13vh;
     width:100%;
     display:grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr) repeat(3, 0.4fr);
     background-color:#EAF9FF;
     transition: all 0.1s ease;
 }
@@ -196,7 +196,7 @@ nav p {
 }
 
 .quick-exit {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr) repeat(2, 0.4fr) 1fr;
 }
 
 /* CSS Grid and Flex */
